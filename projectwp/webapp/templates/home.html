@@ -1,0 +1,20 @@
+<html>
+<head>
+	{% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'webapp/sty.css' %}" />
+	<!-- <link rel = "stylesheet" type  = "text/css" href = "{% staticsty.css"> -->
+	<title>homepage</title></head>
+<body >
+	<div class = "main" >
+		{% load staticfiles %}
+                        <img src="{% static "webapp/images/2.png" %}" alt="image" width = "150" height = "100">
+		<!-- <img src = "2.png" width = "150" height = "100"> -->
+		<div class = "text">
+			<button id = "sign in" onclick = "location.href='login.html';">sign in</button>
+			<button id = "sign up" onclick = "location.href='registration.html';">sign up</button>
+			<!-- <input type = "submit" value="sign in" hspace="20">
+			<input type = "submit" value="sign up" > -->
+		</div>
+	</div>
+</body>
+</html>

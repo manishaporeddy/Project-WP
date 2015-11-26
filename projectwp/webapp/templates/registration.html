@@ -1,0 +1,67 @@
+<html>
+<head>
+	<style type="text/css">
+		body {
+			  font-family: Arial;
+		      font-weight: bold;
+		  }
+		#login {width:360px; margin:0 auto;}
+		form label {display:inline-block; width:240px;}
+		form input[type="text"],
+		form input[type="password"],
+		form input[type="email"],
+		form input[type="number"] {width:200px;}
+	</style>	
+
+<script>
+function myFunction() {
+    var pass1 = document.getElementById("passwordsignup").value;
+    var pass2 = document.getElementById("passwordsignup_confirm").value;
+    var ok = true;
+    if (pass1 != pass2) {
+        alert("passwords do not match! re-enter password.")
+        ok = false;
+    }
+    else {
+        //alert("Passwords Match!!!");
+    }
+    return ok;
+}
+</script>
+</head>	
+<body>
+	<a class="hiddenanchor" id="toregister"></a>
+		<div id="register" class="animate form" align="center">
+			<form  action="mysuperscript.php" autocomplete="on" onsubmit="return myFunction()" method="post"> 
+				<h1> Sign up </h1> 
+				<p> 
+					<label for="usernamesignup" class="uname" data-icon="u">username</label>
+					<input id="usernamesignup" name="usernamesignup" required="required" type="text" placeholder="enter username example:bob99" />
+				</p>
+				<p> 
+					<label for="emailsignup" class="youmail" data-icon="e" >email</label>
+					<input id="emailsignup" name="emailsignup" required="required" type="email" placeholder="example:bob99@gmail.com"/> 
+				</p>
+				<p> 
+					<label for="passwordsignup" class="youpasswd" data-icon="p">Set password </label>
+					<input id="passwordsignup" name="passwordsignup" required="required" type="password" placeholder="eg. X8df!90EO"/>
+				</p>
+				<p> 
+					<label for="passwordsignup_confirm" class="youpasswd" data-icon="p">Confirm password </label>
+					<input id="passwordsignup_confirm" name="passwordsignup_confirm" required="required" type="password" placeholder="eg. X8df!90EO"/>
+				</p>
+				<p>
+					<label for="mobilenumber" class="mno" data-icon="p">Mobile Number(optional) </label>
+					<input id="mobilenumber" name="mobilenumber" type="number" placeholder="eg . 9999999999"/>
+				</p>
+				<p class="signin button"> 
+					<input type="submit" value="Sign up"/> 
+				</p>
+				<p class="change_link">  
+					Already a member ?
+					<a href="login.html" class="to_register"> Go and log in </a>
+				</p>
+			</form>
+		</div>
+</body>
+</html>
